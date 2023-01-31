@@ -12,4 +12,4 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "BasicsCodelab"
+rootProject.name = "dev-toy"
