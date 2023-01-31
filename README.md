@@ -1,3 +1,3 @@
-# jetpack-compose-basics
+# dev-toy
 
-[https://developer.android.com/codelabs/jetpack-compose-basics?hl=ko](https://developer.android.com/codelabs/jetpack-compose-basics?hl=ko#13)
+여러 가지 테스트를 위한 장난감 앱.
