@@ -8,7 +8,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Devtoy">
         <activity
-            android:name="com.dgparkcode.toy.MainActivity"
+            android:name="com.dgparkcode.toyapp.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
