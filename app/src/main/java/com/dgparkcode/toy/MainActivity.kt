@@ -1,4 +1,4 @@
-package com.dgparkcode.devtoy
+package com.dgparkcode.toy
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

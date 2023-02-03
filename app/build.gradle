@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.dgparkcode.devtoy'
+    namespace 'com.dgparkcode.toy'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.dgparkcode.devtoy"
+        applicationId "com.dgparkcode.toy"
         minSdk 24
         targetSdk 33
         versionCode 1
