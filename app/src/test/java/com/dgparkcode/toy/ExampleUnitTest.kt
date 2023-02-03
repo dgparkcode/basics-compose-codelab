@@ -1,4 +1,4 @@
-package com.dgparkcode.devtoy
+package com.dgparkcode.toy
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

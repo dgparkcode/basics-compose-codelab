@@ -1,4 +1,4 @@
-package com.dgparkcode.devtoy
+package com.dgparkcode.toy
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
