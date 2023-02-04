@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ToyApp</string>
     <string name="done">Done</string>
+    <string name="testing">Testing</string>
 </resources>
