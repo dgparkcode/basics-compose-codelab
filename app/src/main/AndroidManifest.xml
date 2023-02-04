@@ -6,7 +6,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Devtoy">
+        android:theme="@style/Theme.ToyApp">
         <activity
             android:name="com.dgparkcode.toyapp.MainActivity"
             android:exported="true">
