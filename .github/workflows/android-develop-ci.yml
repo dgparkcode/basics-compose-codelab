@@ -25,6 +25,9 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     
+    - name: Create google-services.json
+      run: echo '${{ secrets.DEBUG_GOOGLE_SERVICES_JSON }}' > ./app/debug/google-services.json
+    
     - name: Run ktlint
       run: ./gradlew ktlintCheck
       
