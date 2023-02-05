@@ -35,6 +35,16 @@ jobs:
         KEYSTORE_PROPERTIES: ${{ secrets.KEYSTORE_PROPERTIES }}
       run: echo $KEYSTORE_PROPERTIES > ./keystore.properties
 
+    - name: Copy upload-release.jks
+      env:
+        KEYSTORE_RELEASE: ${{ secrets.KEYSTORE_UPLOAD_RELEASE }}
+      run: echo $KEYSTORE_RELEASE | base64 --decode --ignore-garbage > ./keystore/upload-release.jks
+
+    - name: Copy upload-internal.jks
+      env:
+        KEYSTORE_RELEASE: ${{ secrets.KEYSTORE_UPLOAD_INTERNAL }}
+      run: echo $KEYSTORE_INTERNAL | base64 --decode --ignore-garbage > ./keystore/upload-internal.jks
+
     - name: Run ktlint
       run: ./gradlew ktlintCheck
       

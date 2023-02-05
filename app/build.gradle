@@ -26,13 +26,13 @@ android {
         release {
             keyAlias keystoreProperties['releaseKeyAlias']
             keyPassword keystoreProperties['releaseKeyPassword']
-            storeFile file(keystoreProperties['releaseStoreFile'])
+            storeFile rootProject.file(keystoreProperties['releaseStoreFile'])
             storePassword keystoreProperties['releaseStorePassword']
         }
         internal {
             keyAlias keystoreProperties['internalKeyAlias']
             keyPassword keystoreProperties['internalKeyPassword']
-            storeFile file(keystoreProperties['internalStoreFile'])
+            storeFile rootProject.file(keystoreProperties['internalStoreFile'])
             storePassword keystoreProperties['internalStorePassword']
         }
     }
