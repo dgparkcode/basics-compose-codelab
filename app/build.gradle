@@ -4,6 +4,10 @@ plugins {
     id 'com.google.gms.google-services'
 }
 
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
 android {
     namespace 'com.dgparkcode.toyapp'
     compileSdk 33
@@ -18,11 +22,32 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['releaseKeyAlias']
+            keyPassword keystoreProperties['releaseKeyPassword']
+            storeFile file(keystoreProperties['releaseStoreFile'])
+            storePassword keystoreProperties['releaseStorePassword']
+        }
+        internal {
+            keyAlias keystoreProperties['internalKeyAlias']
+            keyPassword keystoreProperties['internalKeyPassword']
+            storeFile file(keystoreProperties['internalStoreFile'])
+            storePassword keystoreProperties['internalStorePassword']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             resValue "string", "app_name", "@string/app_name_release"
+            signingConfig signingConfigs.release
+        }
+        internal {
+            applicationIdSuffix '.internal'
+            resValue "string", "app_name", "@string/app_name_internal"
+            signingConfig signingConfigs.internal
         }
         debug {
             applicationIdSuffix '.debug'
