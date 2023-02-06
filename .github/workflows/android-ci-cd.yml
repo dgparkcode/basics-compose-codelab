@@ -93,6 +93,6 @@ jobs:
       - name: Upload apk artifact
         uses: actions/upload-artifact@v3.0.0
         with:
-          name: app-debug.apk
+          name: app-internal.apk
           path: ./app/build/outputs/apk/internal/app-internal.apk
           retention-days: 14
