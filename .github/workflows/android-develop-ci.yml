@@ -37,7 +37,7 @@ jobs:
 
     - name: show tree
       run: |
-        cd .keystore
+        cd ./keystore
         tree -L 2 -N /
 
     - name: Copy upload-release.jks
