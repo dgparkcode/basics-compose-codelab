@@ -42,7 +42,7 @@ jobs:
         run: ./gradlew ktlintCheck
 
       - name: Run Unit test
-        run: ./gradlew testUnitTest
+        run: ./gradlew testDebugUnitTest
 
       - name: Build debug apk
         run: ./gradlew assembleDebug
@@ -85,9 +85,9 @@ jobs:
         run: ./gradlew ktlintCheck
 
       - name: Run Unit test
-        run: ./gradlew testUnitTest
+        run: ./gradlew testInternalUnitTest
 
-      - name: Build debug apk
+      - name: Build internal apk
         run: ./gradlew assembleInternal
 
       - name: Upload apk artifact
