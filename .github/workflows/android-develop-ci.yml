@@ -36,7 +36,9 @@ jobs:
       run: echo $KEYSTORE_PROPERTIES > ../keystore.properties
 
     - name: show tree
-      run: tree -L 2 -N /
+      run: |
+        cd .keystore
+        tree -L 2 -N /
 
     - name: Copy upload-release.jks
       env:
