@@ -35,6 +35,9 @@ jobs:
         KEYSTORE_PROPERTIES: ${{ secrets.KEYSTORE_PROPERTIES }}
       run: echo $KEYSTORE_PROPERTIES > ../keystore.properties
 
+    - name: show tree
+      run: tree -L 2 -N /
+
     - name: Copy upload-release.jks
       env:
         KEYSTORE_RELEASE: ${{ secrets.KEYSTORE_UPLOAD_RELEASE }}
