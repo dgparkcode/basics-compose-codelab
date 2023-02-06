@@ -90,9 +90,9 @@ jobs:
       - name: Build internal apk
         run: ./gradlew assembleInternal
 
-      - name: Upload apk artifact
-        uses: actions/upload-artifact@v3.0.0
+      - name: Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1.5.0
         with:
-          name: app-internal.apk
-          path: ./app/build/outputs/apk/internal/app-internal.apk
-          retention-days: 14
+          appId: ${{ secrets.FIREBASE_APP_ID_INTERNAL }}
+          token: ${{ secrets.FIREBASE_TOKEN_INTERNAL }}
+          file: ./app/build/outputs/apk/debug/app-internal.apk
