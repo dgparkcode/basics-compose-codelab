@@ -33,10 +33,10 @@ jobs:
 
       - name: Create Keystore and Properties
         run: |
-          mkdir ./app/keystore
-          echo '${{ secrets.UPLOAD_RELEASE_JKS_BASE64 }}' | base64 -d > ./app/keystore/upload-release.jks
-          echo '${{ secrets.UPLOAD_INTERNAL_JKS_BASE64 }}' | base64 -d > ./app/keystore/upload-internal.jks
-          echo '${{ secrets.KEYSTORE_PROPERTIES }}' > ./app/keystore/keystore.properties
+          mkdir ./keystore
+          echo '${{ secrets.UPLOAD_RELEASE_JKS_BASE64 }}' | base64 -d > ./keystore/upload-release.jks
+          echo '${{ secrets.UPLOAD_INTERNAL_JKS_BASE64 }}' | base64 -d > ./keystore/upload-internal.jks
+          echo '${{ secrets.KEYSTORE_PROPERTIES }}' > ./keystore/keystore.properties
 
       - name: Run KtlintCheck
         run: ./gradlew ktlintCheck
@@ -76,10 +76,10 @@ jobs:
 
       - name: Create Keystore and Properties
         run: |
-          mkdir ./app/keystore
-          echo '${{ secrets.UPLOAD_RELEASE_JKS_BASE64 }}' | base64 -d > ./app/keystore/upload-release.jks
-          echo '${{ secrets.UPLOAD_INTERNAL_JKS_BASE64 }}' | base64 -d > ./app/keystore/upload-internal.jks
-          echo '${{ secrets.KEYSTORE_PROPERTIES }}' > ./app/keystore/keystore.properties
+          mkdir ./keystore
+          echo '${{ secrets.UPLOAD_RELEASE_JKS_BASE64 }}' | base64 -d > ./keystore/upload-release.jks
+          echo '${{ secrets.UPLOAD_INTERNAL_JKS_BASE64 }}' | base64 -d > ./keystore/upload-internal.jks
+          echo '${{ secrets.KEYSTORE_PROPERTIES }}' > ./keystore/keystore.properties
 
       - name: Run KtlintCheck
         run: ./gradlew ktlintCheck
