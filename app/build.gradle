@@ -4,7 +4,7 @@ plugins {
     id 'com.google.gms.google-services'
 }
 
-def keystorePropertiesFile = rootProject.file("app/keystore/keystore.properties")
+def keystorePropertiesFile = rootProject.file("./keystore/keystore.properties")
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
